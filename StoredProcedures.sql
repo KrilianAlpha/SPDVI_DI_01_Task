@@ -28,6 +28,18 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+CREATE procedure [dbo].[getProductLine]
+as
+begin
+	SET NOCOUNT ON;
+	SELECT DISTINCT [ProductLine] FROM [Production].[Product] WHERE ProductLine IS NOT NULL
+end
+GO
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 CREATE PROCEDURE [dbo].[getListPrice]
 as
 begin
